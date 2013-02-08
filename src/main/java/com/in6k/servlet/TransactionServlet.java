@@ -61,15 +61,11 @@ public class TransactionServlet extends HttpServlet {
 
             try {
                 AccountDAOimpl.update(accIdFrom, accountFrom);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-
-            try {
                 AccountDAOimpl.update(accIdTo, accountTo);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+
         }
 
         response.sendRedirect("/account");
