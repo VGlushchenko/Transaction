@@ -52,8 +52,6 @@
                     Password<br>
                     <input class="input-large" name="password" value="" title="password" tabindex="5" type="password"><br>
                     <input class="btn btn-primary" value="Add" tabindex="6" type="submit">
-                    <br><input name="system" value="1" tabindex="7" type="checkbox">
-                    <h6>System</h6>
                 </form>
             </fieldset>
         </div>
@@ -76,8 +74,8 @@
                         <td> <c:out value="${user.email}"/></td>
                         <td> <c:out value="${user.password}"/></td>
                         <td>
-                            <input class="btn btn-primary" value="Update" onclick="location.href='/edit?action=update&accId=<c:out value="${acc.id}"/>'" type="button"/>
-                            <input class="btn btn-primary" value="Delete" onclick="location.href='/edit?action=delete&accId=<c:out value="${acc.id}"/>'" type="button"/>
+                            <input class="btn btn-primary" value="Update" onclick="location.href='/#'" type="button"/>
+                            <input class="btn btn-primary" value="Delete" onclick="location.href='/#'" type="button"/>
                         </td>
                     </tr>
                 </c:forEach>

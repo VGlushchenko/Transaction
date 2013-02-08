@@ -24,6 +24,7 @@ public class AccountServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         request.setAttribute("accounts", accounts);
 
         request.getRequestDispatcher("/account.jsp").include(request, response);
@@ -42,7 +43,6 @@ public class AccountServlet extends HttpServlet {
         }
 
         Account acc = new Account();
-
         acc.setName(request.getParameter("name"));
         acc.setUser(user);
         acc.setTypeId(25);

@@ -25,6 +25,7 @@ public class EditServlet extends HttpServlet {
             }
 
             request.setAttribute("accName", account.getName());
+
             request.getRequestDispatcher("/index.jsp").include(request, response);
         }
         else if (request.getParameter("action").equals("delete")) {
@@ -34,11 +35,9 @@ public class EditServlet extends HttpServlet {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+
             request.getRequestDispatcher("/account.jsp").include(request, response);
         }
     }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    }
 }

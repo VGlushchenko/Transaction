@@ -32,13 +32,13 @@ public class Servlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         UserForm uf = new UserForm();
-
         uf.setId(request.getParameter("id"));
         uf.setName(request.getParameter("name"));
         uf.setEmail(request.getParameter("email"));
         uf.setPassword(request.getParameter("password"));
 
         User user = new User(uf);
+
         UserDAOimpl.save(user);
 
         request.setAttribute("form", user);

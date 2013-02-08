@@ -25,6 +25,7 @@ public class TransactionServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         request.setAttribute("transactions", transactions);
 
         request.getRequestDispatcher("/Transaction.jsp").include(request, response);
@@ -49,7 +50,6 @@ public class TransactionServlet extends HttpServlet {
             double summ = Double.parseDouble(request.getParameter("summ"));
 
             Transaction tr = new Transaction();
-
             tr.setCreditAccount(accountTo);
             tr.setDebetAccount(accountFrom);
             tr.setSum(summ);
